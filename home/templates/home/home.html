@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            margin: 0;
+            padding: 0;
+            color: #1f2937;
+        }
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .hero {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(31,41,55,0.08);
+            text-align: center;
+        }
+        .hero h1 {
+            margin: 0 0 16px;
+            font-size: 3rem;
+            color: #0f172a;
+        }
+        .hero p {
+            margin: 0 0 32px;
+            font-size: 1.1rem;
+            color: #475569;
+        }
+        .button-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+        }
+        .button-row a {
+            display: inline-block;
+            padding: 16px 26px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 600;
+            color: white;
+            background: #2563eb;
+            transition: transform 0.18s ease, background-color 0.18s ease;
+        }
+        .button-row a:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+        }
+        .button-row a.secondary {
+            background: #475569;
+        }
+        .button-row a.secondary:hover {
+            background: #334155;
+        }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>Welcome to Your Site</h1>
+            <p>Access personalized dashboards, read the latest blog posts, and sign in with your account.</p>
+            <div class="button-row">
+                <a href="/login/">Login</a>
+                <a href="/blog/" class="secondary">Blog</a>
+                <a href="/dashboard/" class="secondary">Dashboard</a>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Need an account? Create one using the Django admin or by adding user signup in the future.</p>
+        </div>
+    </div>
+</body>
+</html>

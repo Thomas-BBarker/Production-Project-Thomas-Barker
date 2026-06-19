@@ -1,6 +1,11 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator
+from django.contrib.auth.decorators import login_required
 from .models import Post
+
+def home_page(request):
+    return render(request, "home/home.html")
+
 
 def post_list(request):
     posts = Post.objects.all()
@@ -28,3 +33,8 @@ def post_list(request):
         'category_filter': category_filter,
         'categories': categories,
     })
+
+
+@login_required(login_url='login')
+def dashboard(request):
+    return render(request, "home/dashboard.html")
